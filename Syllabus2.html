@@ -24,11 +24,11 @@
 
         /* Container for content to add some padding from edges */
         .content-container {
-             background-color: rgba(10, 10, 10, 0.6); /* Slightly transparent dark background for content area */
-             padding: 1rem;
-             border-radius: 0.5rem;
-             margin: 1rem auto; /* Center container */
-             max-width: 48rem; /* Limit width */
+            background-color: rgba(10, 10, 10, 0.6); /* Slightly transparent dark background for content area */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem auto; /* Center container */
+            max-width: 48rem; /* Limit width */
         }
 
 
@@ -62,17 +62,17 @@
             /* Enhanced metallic reflection on hover */
             background: linear-gradient(to bottom, #3c3c3c, #252525);
             border-color: #888; /* Lighter border on hover */
-             /* Slightly brighter neon glow on hover */
+            /* Slightly brighter neon glow on hover */
             box-shadow: 0 0 8px rgba(255, 255, 255, 0.4),
                         0 0 15px rgba(255, 255, 255, 0.2);
         }
 
         .week-toggle.active {
-             /* Style for the active/open button */
-             background: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
-             border-color: #aaa; /* Even lighter border when active */
-             box-shadow: 0 0 6px rgba(255, 255, 255, 0.3),
-                         0 0 12px rgba(255, 255, 255, 0.15);
+            /* Style for the active/open button */
+            background: linear-gradient(to bottom, #2f2f2f, #1f1f1f);
+            border-color: #aaa; /* Even lighter border when active */
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.3),
+                        0 0 12px rgba(255, 255, 255, 0.15);
         }
 
         .submenu {
@@ -89,7 +89,7 @@
         }
 
         .submenu.open {
-            max-height: 200px;
+            max-height: 200px; /* Adjust as needed for content */
             opacity: 1;
             padding: 1rem;
         }
@@ -122,7 +122,7 @@
 
     <div class="content-container p-4 md:p-8">
         <div class="text-center mb-8 md:mb-12">
-             <h1 class="main-title text-3xl md:text-4xl font-bold text-gray-100">
+            <h1 class="main-title text-3xl md:text-4xl font-bold text-gray-100">
                 Syllabus: Implementation of Artificial Intelligence as a Support Tool for Creating English Language Assignments
             </h1>
         </div>
@@ -165,8 +165,8 @@
             submenu.innerHTML = `
                 <a href="#content-${weekData.tool.toLowerCase()}" class="hover:text-white">Content: ${weekData.tool}</a>
                 <a href="#tutorial-${weekData.tool.toLowerCase()}" class="hover:text-white">Tutorial: ${weekData.tutorial}</a>
-                <a href="#portfolio-${weekData.week}" class="hover:text-white">Portfolio</a>
-            `;
+                <a href="#task-${weekData.week}" class="hover:text-white">Task</a>
+            `; // Changed "Portfolio" to "Task" and updated href
 
             // Append button and submenu to the week div
             weekDiv.appendChild(button);
@@ -191,7 +191,7 @@
                     // If closing, add full radius back to button
                     button.classList.remove('rounded-t-lg');
                     button.classList.add('rounded-lg');
-                     // Remove bottom radius from submenu (handled by CSS now)
+                    // Remove bottom radius from submenu (handled by CSS now)
                 }
 
 
